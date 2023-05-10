@@ -9,34 +9,56 @@
 </head>
 <body>
     <header>
-        <h1>Salas de ensayo</h1>
+        <a href="index.html">
+            <img src="./IMG/microfono.png" alt="logo" width="40">
+        </a>
         <nav>
+
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="salas.html">Salas</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contactos</a></li>
+                <li><a class="aheader" href="index.html">Inicio</a></li>
+                <li><a class="aheader" href="salas.html">Salas</a></li>
+                <li><a class="aheader" href="servicios.html">Servicios</a></li>
+                <li><a class="aheader" href="contacto.html">Contactos</a></li>
 
             </ul>
         </nav>
     </header>
-    <article id="contactos">
-        <h2>Contactos</h2>
-        <form>
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Consulta:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Enviar</button>
+    <article id="Contactos">
+        <form action="">
+            <div class="form">
+                <h2>Contacto</h2>
+                <div class="grupo">
+                    <input type="text" id="name" name="name" required><span class="barra"></span>
+                    <label for="name">Nombre</label>
+                </div>
+                <div class="grupo">
+                    <input type="email" id="email" name="email" required><span class="barra"></span>
+                    <label for="email">Email</label>
+                </div>
+                <div class="grupo">
+                    <input type="number" id="number" name="number" required><span class="barra"></span>
+                    <label for="number">Edad</label>
+                </div>
+                <div class="grupo">
+                    <textarea name="contacto" id="contacto" rows="3" required ></textarea><span class="barra"></span>
+                    <label for="contacto">Mensaje</label>
+                </div>
+                <button type="submit">Enviar</button>
+            </div>
         </form>
     </article>
+
+
     <footer>
-        <hr>
+        <a href="index.html"> <img src="./IMG/microfono.png" alt="logo" width="30"></a>
+
+        <nav>
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="mailto:ejemplo@gmail.com">Correo</a>
+            <a href=""></a>
+            <a href=""></a>
+        </nav>
         <p>Derechos reservados &copy; 2023 </p>
     </footer>
 </body>
