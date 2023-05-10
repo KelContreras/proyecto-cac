@@ -1,74 +1,192 @@
 /* Estilos generales */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* Para que el scrolleo en la one page sea suave */
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* Para que el scrolleo en la one page sea suave */
+  scroll-behavior: smooth;
 }
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-  }
-  
-  header h1 {
-    font-size: 36px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  nav li {
-    margin-right: 20px;
-  }
-  
-  nav a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #007bff;
-  }
-  footer{
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-  }
-
-  h2{
-    padding: 20 px;
-  }
-
- 
-  
-  ul {
-    list-style: disc;
-    margin-left: 2rem;
-  }
-  .sala {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease;
-    
+  background-color: #a6a3a3;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
 }
+
+header {
+  background-color: black;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 36px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+h2 {
+  padding: 20px;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+#Contactos {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Contactos h2 {
+  color: #e26530;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 800;
+}
+
+form {
+  background: #fff;
+  width: 30%;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+.form {
+  width: 100%;
+  margin: auto;
+}
+
+form .grupo {
+  position: relative;
+  margin: 45px;
+}
+
+input,textarea {
+  background: none;
+  color: #c6c6c6;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #898a8f67;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  color: rgb(94, 93, 93);
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label {
+  position: absolute;
+  top: -14px;
+  font-size: 12px;
+  color:#e26530;
+}
+
+ .grupo label {
+  color: #7f8997;
+  font-size: 16px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: 0.5s ease all;
+  pointer-events: none;
+}
+
+input:focus~.barra::before,
+textarea:focus~.barra::before {
+  width: 100%;
+}
+
+.barra {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.barra::before {
+  content: '';
+  height: 2px;
+  width: 0%;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to right, #e45412, #e4896b);
+  transition: 0.3s ease all;
+  left: 0%;
+}
+
+/* Estilos para el botón "Enviar" */
+form button[type="submit"] {
+
+  display: block;
+  font-size: 16px;
+  margin: 10px auto;
+  background-color: #949292;
+  border: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+form button[type="submit"]:hover {
+  background-color: #ff6659;
+}
+
+form button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+.sala {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+
+}
+
 .sala:hover {
   transform: translateY(-10px);
 }
@@ -86,69 +204,57 @@ body {
 .sala p {
   margin-top: 10px
 }
-  .mainsala{
+
+.mainsala {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   margin: 20px;
 }
 
-  
-  /* Estilos para el botón "Enviar" */
+/* Estilos para diferentes tamaños de pantalla */
+@media only screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
   form button[type="submit"] {
-    background-color: #f44336;
-    border: none;
-    color: #fff;
-    padding: 1rem 2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
+    padding: 0.75rem 1.5rem;
   }
-  
-  form button[type="submit"]:hover {
-    background-color: #ff6659;
+
+  form{
+    width: 50%;
   }
+}
   
-  form button[type="submit"]:active {
-    transform: translateY(1px);
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 0.875rem;
   }
-  
-  /* Estilos para diferentes tamaños de pantalla */
-  @media only screen and (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      text-align: center;
-    }
-    
-    nav ul li {
-      display: block;
-      margin-bottom: 1rem;
-    }
-    
-    form button[type="submit"] {
-      padding: 0.75rem 1.5rem;
-    }
+
+  nav ul li a {
+    padding: 0.5rem;
   }
-  
-  @media only screen and (max-width: 480px) {
-    body {
-      font-size: 0.875rem;
-    }
-    
-    nav ul li a {
-      padding: 0.5rem;
-    }
-    
-    main {
-      padding: 1rem;
-    }
-    
-    ul {
-      margin-left: 1.5rem;
-    }
-    
-    form button[type="submit"] {
-      padding: 0.5rem 1rem;
-    }
+
+  main {
+    padding: 1rem;
   }
-  
+
+  ul {
+    margin-left: 1.5rem;
+  }
+
+  form button[type="submit"] {
+    padding: 0.5rem 1rem;
+  }
+
+  form{
+    width: 80%;
+  }
+}
