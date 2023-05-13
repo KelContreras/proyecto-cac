@@ -28,22 +28,27 @@
             <div class="form">
                 <h2>Contacto</h2>
                 <div class="grupo">
-                    <input type="text" id="name" name="name" required><span class="barra"></span>
+                    <input type="text" id="contacto-name" name="name" required onkeyup="validacionName()"  placeholder="               Marcos Gomez">
                     <label for="name">Nombre</label>
+                    <span class="barra" id="error-nombre"></span>
                 </div>
                 <div class="grupo">
-                    <input type="email" id="email" name="email" required><span class="barra"></span>
+                    <input type="email" id="contacto-email" name="email" required onkeyup="validacionEmail()" placeholder="              ejemplo@gmail.com">
                     <label for="email">Email</label>
+                    <span class="barra" id="error-email"></span>
                 </div>
                 <div class="grupo">
-                    <input type="number" id="number" name="number" required><span class="barra"></span>
-                    <label for="number">Edad</label>
+                    <input type="tel" id="contacto-number" name="number" required onkeyup="validacionNumber()" placeholder="              3410009999">
+                    <label for="number">Telefono</label>
+                    <span class="barra" id="error-number"></span>
                 </div>
                 <div class="grupo">
-                    <textarea name="contacto" id="contacto" rows="3" required ></textarea><span class="barra"></span>
-                    <label for="contacto">Mensaje</label>
+                    <textarea name="mensaje" id="contacto-mensaje" rows="3" required onkeyup="validacionMensaje()"></textarea>
+                    <label for="mensaje">Mensaje</label>
+                    <span class="barra" id="error-mensaje"></span>
                 </div>
-                <button type="submit">Enviar</button>
+                <button onclick="return validacionFormulario()" type="submit" class="btn btn-primary">Enviar</button>
+                <span id="errorSubmit"></span>
             </div>
         </form>
     </article>
@@ -61,5 +66,7 @@
         </nav>
         <p>Derechos reservados &copy; 2023 </p>
     </footer>
+
+   <script src="JS/validacion.js"></script> 
 </body>
 </html>

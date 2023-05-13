@@ -103,7 +103,7 @@ ul {
 }
 
 #Contactos h2 {
-  color: #e26530;
+  color: #229ae4;
   text-align: center;
   margin: 10px 0;
   font-weight: 800;
@@ -162,6 +162,19 @@ form .grupo {
   position: relative;
   margin: 45px;
 }
+.grupo span{
+  font-size: 14px;
+  color: red;
+}
+
+#error-submit{
+color: red;
+}
+
+.grupo span i{
+  color: seagreen;
+
+}
 
 input,textarea {
   background: none;
@@ -188,7 +201,7 @@ textarea:valid~label {
   position: absolute;
   top: -14px;
   font-size: 12px;
-  color:#e26530;
+  color:#229ae4;
 }
 
  .grupo label {
@@ -218,7 +231,7 @@ textarea:focus~.barra::before {
   width: 0%;
   bottom: 0;
   position: absolute;
-  background: linear-gradient(to right, #e45412, #e4896b);
+  background: linear-gradient(to right, #7ac8e3, #2fb3e7);
   transition: 0.3s ease all;
   left: 0%;
 }
