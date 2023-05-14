@@ -2,7 +2,7 @@ var errorNombre = document.getElementById('error-nombre');
 var errorEmail = document.getElementById('error-email');
 var errorNumero = document.getElementById('error-number');
 var errorMensaje = document.getElementById('error-mensaje');
-var errorSubmit= document.getElementById('error-submit');
+var errorSubmit = document.getElementById('error-submit');
 
 function validacionName(){
     var nombre = document.getElementById('contacto-name').value;
@@ -15,7 +15,7 @@ function validacionName(){
         errorNombre.innerHTML= 'Escribe el nombre completo';
         return false;
     }
-    errorNombre.innerHTML= "Valido";
+    errorNombre.innerHTML= 'Valido';
     return true;
 }
 function validacionEmail(){
@@ -29,7 +29,7 @@ function validacionEmail(){
         errorEmail.innerHTML= 'Email invalido';
         return false;
     }
-    errorEmail.innerHTML= "Valido";
+    errorEmail.innerHTML= 'Valido';
     return true;
 }
 function validacionNumero(){
@@ -47,7 +47,7 @@ function validacionNumero(){
         errorNumero.innerHTML= 'Solo digitos';
         return false;
     }
-    errorNumero.innerHTML= "Valido";
+    errorNumero.innerHTML= 'Valido';
     return true;
 }
 function validacionMensaje(){
@@ -59,13 +59,13 @@ function validacionMensaje(){
     errorMensaje.innerHTML= c + 'Se necesitan al menos 10 caracteres';
     return false;
     }
-    errorMensaje.innerHTML= "Valido";
+    errorMensaje.innerHTML= 'Valido';
     return true;
     }
 
 function validacionFormulario(){
     if (!validacionName() || !validacionEmail() || !validacionNumero() || !validacionMensaje()){
-        errorSubmit.innerHTML="Los valores son incorrectos";
+        errorSubmit.innerHTML='Los valores son incorrectos';
 
     }
 }

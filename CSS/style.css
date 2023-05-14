@@ -171,11 +171,6 @@ form .grupo {
 color: red;
 }
 
-.grupo span i{
-  color: seagreen;
-
-}
-
 input,textarea {
   background: none;
   color: #c6c6c6;
