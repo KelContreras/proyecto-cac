@@ -14,7 +14,7 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: #fff;
   color: #fff;
   padding: 20px;
   display: flex;
@@ -56,7 +56,7 @@ nav a {
 
 .aheader:active {
   background-color: #ffffff;
-  color: #3a1714;
+  color: rgb(17, 16, 16);
 }
 
 footer {
@@ -79,9 +79,9 @@ footer a {
 }
 
 #fondo {
-  width: 100vw;
+  width: 45%;
 }
-
+/*100vw*/
 
 h2 {
   padding: 20 px;
