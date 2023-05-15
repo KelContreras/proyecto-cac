@@ -8,14 +8,14 @@
 }
 
 body {
-  background-color: #a6a3a3;
-  font-family: Arial, sans-serif;
+  background-color: #0e0d0d;
+  font-family: Arial, sans-serif; color: #fff;
   font-size: 1rem;
 }
 
 header {
   background-color: #fff;
-  color: #fff;
+  color: #100f0f;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -24,13 +24,13 @@ header {
 
 }
 
-.aheader {
-  background-color: #3a1714;
+/*.aheader {
+  background-color: #171616;
   padding: 8px;
   border-radius: 10px;
 }
 
-/* header h1 {
+ header h1 {
   font-size: 36px;
 } */
 
@@ -44,14 +44,13 @@ nav li {
 }
 
 nav a {
-  color: #ffffff;
+  color: #0c0c0c;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .aheader:hover {
-  outline: 1px solid;
-  color: #614d15;
+  color: #229ae4;
 }
 
 .aheader:active {
@@ -60,8 +59,9 @@ nav a {
 }
 
 footer {
-  background-color: #333;
-  color: #ffffff;
+  background-color: #fff;
+  color: #0b0b0b;
+  text-align: center;
   width: 100%;
   bottom: 0;
 
@@ -79,7 +79,7 @@ footer a {
 }
 
 #fondo {
-  width: 45%;
+  width: 50%;
 }
 /*100vw*/
 
@@ -111,6 +111,7 @@ ul {
 
 .sala {
   background-color: #fff;
+  color: #0c0c0c;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
