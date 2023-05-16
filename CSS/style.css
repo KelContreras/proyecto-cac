@@ -24,16 +24,6 @@ header {
 
 }
 
-/*.aheader {
-  background-color: #171616;
-  padding: 8px;
-  border-radius: 10px;
-}
-
- header h1 {
-  font-size: 36px;
-} */
-
 nav ul {
   list-style: none;
   display: flex;
@@ -57,6 +47,22 @@ nav a {
   background-color: #ffffff;
   color: rgb(17, 16, 16);
 }
+.fotos {
+  display: flex;
+  height: 20rem;
+  gap: 1rem;
+}
+.fotos > div{
+  flex: 1;
+  border-radius: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+.fotos > div:hover {
+  flex: 5;
+}
 
 footer {
   background-color: #fff;
@@ -78,10 +84,25 @@ footer a {
 
 }
 
-#fondo {
-  width: 50%;
+#inicio{
+  font-family: 'Koulen', cursive; 
+  letter-spacing: 3px;
+  font-size: x-large; 
+  text-align: center;
 }
-/*100vw*/
+
+#fondo {
+  width: 100%;
+  height: 10%;
+}
+
+.parrafo {
+  font-family: 'Allerta', sans-serif;
+  text-align: center;
+}
+.parrafo p {
+  font-size: 16px;
+}
 
 h2 {
   padding: 20 px;
@@ -117,7 +138,6 @@ ul {
   text-align: center;
   transition: transform 0.3s ease;
   border-radius: 15px;
-
 }
 
 .sala:hover {
@@ -130,6 +150,7 @@ ul {
 }
 
 .sala h2 {
+  font-family: 'Allerta', sans-serif;
   margin-top: 20px;
   font-size: 24px;
 }
@@ -145,6 +166,9 @@ ul {
   margin: 20px;
 }
 
+.servicios {
+  text-align: center;
+}
 
 form {
   background: #fff;
@@ -246,7 +270,6 @@ form button[type="submit"] {
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
-
 
 form button[type="submit"]:hover {
   background-color: #ff6659;

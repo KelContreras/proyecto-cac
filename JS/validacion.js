@@ -1,6 +1,6 @@
 var errorNombre = document.getElementById('error-nombre');
 var errorEmail = document.getElementById('error-email');
-var errorNumero = document.getElementById('error-number');
+var errorNumero = document.getElementById('error-numero');
 var errorMensaje = document.getElementById('error-mensaje');
 var errorSubmit = document.getElementById('error-submit');
 
@@ -15,7 +15,7 @@ function validacionName(){
         errorNombre.innerHTML= 'Escribe el nombre completo';
         return false;
     }
-    errorNombre.innerHTML= 'Valido';
+    errorNombre.innerHTML= "<i class='bx bxs-check-circle' style='color:#12e02e'></i>";
     return true;
 }
 function validacionEmail(){
@@ -29,17 +29,17 @@ function validacionEmail(){
         errorEmail.innerHTML= 'Email invalido';
         return false;
     }
-    errorEmail.innerHTML= 'Valido';
+    errorEmail.innerHTML= "<i class='bx bxs-check-circle' style='color:#12e02e'></i>";
     return true;
 }
 function validacionNumero(){
-    var numero = document.getElementById('contacto-number').value;
+    var numero = document.getElementById('numero').value;
 
     if (numero.length == 0){
         errorNumero.innerHTML= 'Completar telefono';
         return false;
     }
-    if (numero.length !== 10){
+    if (numero.length > 10){
         errorNumero.innerHTML= 'Debe tener 10 digitos';
         return false;
     }
@@ -47,9 +47,10 @@ function validacionNumero(){
         errorNumero.innerHTML= 'Solo digitos';
         return false;
     }
-    errorNumero.innerHTML= 'Valido';
+    errorNumero.innerHTML= "<i class='bx bxs-check-circle' style='color:#12e02e'></i>";
     return true;
 }
+
 function validacionMensaje(){
     var mensaje = document.getElementById('contacto-mensaje').value;
     var cantidad = 10;
@@ -59,13 +60,13 @@ function validacionMensaje(){
     errorMensaje.innerHTML= c + 'Se necesitan al menos 10 caracteres';
     return false;
     }
-    errorMensaje.innerHTML= 'Valido';
+    errorMensaje.innerHTML= "<i class='bx bxs-check-circle' style='color:#12e02e'></i>";
     return true;
     }
 
-function validacionFormulario(){
+/*function validacionFormulario(){
     if (!validacionName() || !validacionEmail() || !validacionNumero() || !validacionMensaje()){
         errorSubmit.innerHTML='Los valores son incorrectos';
-
+        return false;
     }
-}
+}*/
