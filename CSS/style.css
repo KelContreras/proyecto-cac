@@ -29,9 +29,6 @@ nav ul {
   display: flex;
 }
 
-nav li {
-  margin-right: 20px;
-}
 
 nav a {
   color: #0c0c0c;
@@ -39,8 +36,22 @@ nav a {
   transition: color 0.3s ease;
 }
 
+.aheader{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #fffdfd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  background-color: #0b0b0b;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 8px;
+  
+}
+
 .aheader:hover {
-  color: #229ae4;
+  color: #000000;
+  background-color: #ffffff;
+  outline: 2px solid black;
 }
 
 .aheader:active {
