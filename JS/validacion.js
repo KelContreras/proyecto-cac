@@ -57,16 +57,10 @@ function validacionMensaje(){
     var c = cantidad - mensaje.length;
 
     if ( c > 0){
-    errorMensaje.innerHTML= c + 'Se necesitan al menos 10 caracteres';
+    errorMensaje.innerHTML= '(' + c + ')' + ' ' + 'Se necesitan al menos 10 caracteres';
     return false;
     }
     errorMensaje.innerHTML= "<i class='bx bxs-check-circle' style='color:#12e02e'></i>";
     return true;
     }
 
-/*function validacionFormulario(){
-    if (!validacionName() || !validacionEmail() || !validacionNumero() || !validacionMensaje()){
-        errorSubmit.innerHTML='Los valores son incorrectos';
-        return false;
-    }
-}*/

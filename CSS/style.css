@@ -81,6 +81,7 @@ footer {
   text-align: center;
   width: 100%;
   bottom: 0;
+  padding: 20px;
 
 }
 
@@ -93,6 +94,27 @@ footer nav {
 footer a {
   padding: 10px;
 
+}
+
+.row {
+display: flex;
+flex-wrap: wrap;
+}
+#servicios {
+  flex: 50px;
+  padding: 20px;
+  text-align: justify;
+}
+#horario {
+  flex: 50px;
+  padding: 20px;
+  text-align: justify;
+}
+
+#mapa {
+  flex: 100%;
+  padding: 20px;
+  text-align: center;
 }
 
 #inicio{
@@ -135,7 +157,7 @@ ul {
 }
 
 #Contactos h2 {
-  color: #229ae4;
+  color:#0c0c0c;
   text-align: center;
   margin: 10px 0;
   font-weight: 800;
@@ -284,7 +306,7 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
-  background-color: #ff6659;
+  background-color: #229ae4;
 }
 
 form button[type="submit"]:active {
