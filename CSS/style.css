@@ -9,11 +9,13 @@
 
 body {
   background-color: #0e0d0d;
-  font-family: Arial, sans-serif; color: #fff;
+  font-family: Arial, sans-serif;
+  color: #fff;
   font-size: 1rem;
 }
 
 header {
+  position: static;
   background-color: #fff;
   color: #100f0f;
   padding: 20px;
@@ -29,15 +31,14 @@ nav ul {
   display: flex;
 }
 
-
 nav a {
   color: #0c0c0c;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.aheader{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+.aheader {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #fffdfd;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -45,7 +46,7 @@ nav a {
   padding: 8px;
   margin: 5px;
   border-radius: 8px;
-  
+
 }
 
 .aheader:hover {
@@ -58,12 +59,14 @@ nav a {
   background-color: #ffffff;
   color: rgb(17, 16, 16);
 }
+
 .fotos {
   display: flex;
   height: 20rem;
   gap: 1rem;
 }
-.fotos > div{
+
+.fotos>div {
   flex: 1;
   border-radius: 1rem;
   background-position: center;
@@ -71,7 +74,8 @@ nav a {
   background-size: auto 100%;
   transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
 }
-.fotos > div:hover {
+
+.fotos>div:hover {
   flex: 5;
 }
 
@@ -82,29 +86,74 @@ footer {
   width: 100%;
   bottom: 0;
   padding: 20px;
-
 }
 
 footer nav {
   margin: 0 auto;
-
-
 }
 
 footer a {
   padding: 10px;
+}
 
+/* transformacion 1 y 2 de imagenes/footer */
+.transformacion1 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 50px;
+  float: right;
+}
+
+.transformacion1 img {
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.transformacion1 img.top:hover {
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+}
+
+.transformacion2 {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin: 50px;
+  float: left;
+}
+
+.transformacion2 img {
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.transformacion2 img.top:hover {
+  width: 100px;
+  height: 100px;
+  opacity: 0;
 }
 
 .row {
-display: flex;
-flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
+
 #servicios {
   flex: 50px;
   padding: 20px;
   text-align: justify;
 }
+
 #horario {
   flex: 50px;
   padding: 20px;
@@ -117,22 +166,24 @@ flex-wrap: wrap;
   text-align: center;
 }
 
-#inicio{
-  font-family: 'Koulen', cursive; 
+#inicio {
+  font-family: 'Koulen', cursive;
   letter-spacing: 3px;
-  font-size: x-large; 
+  font-size: x-large;
   text-align: center;
 }
 
 #fondo {
   width: 100%;
-  height: 10%;
+  height: 600px;
 }
 
 .parrafo {
   font-family: 'Allerta', sans-serif;
   text-align: center;
+  padding: 20px;
 }
+
 .parrafo p {
   font-size: 16px;
 }
@@ -141,26 +192,9 @@ h2 {
   padding: 20 px;
 }
 
-
 ul {
   list-style: disc;
   margin-left: 2rem;
-}
-
-#Contactos {
-  font-family: Arial, sans-serif;
-  width: 100%;
-  height: 650px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#Contactos h2 {
-  color:#0c0c0c;
-  text-align: center;
-  margin: 10px 0;
-  font-weight: 800;
 }
 
 .sala {
@@ -204,6 +238,23 @@ ul {
   justify-content: center;
 }
 
+/* Estilos para el formulario/contactos */
+#Contactos {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Contactos h2 {
+  color: #0c0c0c;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 800;
+}
+
 form {
   background: #fff;
   width: 30%;
@@ -221,16 +272,18 @@ form .grupo {
   position: relative;
   margin: 45px;
 }
-.grupo span{
+
+.grupo span {
   font-size: 14px;
   color: red;
 }
 
-#error-submit{
-color: red;
+#error-submit {
+  color: red;
 }
 
-input,textarea {
+input,
+textarea {
   background: none;
   color: #c6c6c6;
   font-size: 18px;
@@ -255,10 +308,10 @@ textarea:valid~label {
   position: absolute;
   top: -14px;
   font-size: 12px;
-  color:#229ae4;
+  color: #229ae4;
 }
 
- .grupo label {
+.grupo label {
   color: #7f8997;
   font-size: 16px;
   position: absolute;
@@ -329,7 +382,7 @@ form button[type="submit"]:active {
     padding: 0.75rem 1.5rem;
   }
 
-  form{
+  form {
     width: 50%;
   }
 }
