@@ -1,3 +1,4 @@
+
 // Selecciona el botón del menú hamburguesa y el menú de navegación
 var menuToggle = document.querySelector('.menu-toggle');
 var mainNav = document.querySelector('#main-nav ul');
@@ -12,54 +13,29 @@ menuToggle.addEventListener('click', function() {
 const { createApp } = Vue;
 
 createApp({
+  data() {
+    return {
+      artistInfo: null
+    };
+  },
+  mounted() {
+    this.getArtistInfo('Nombre del artista');
+  },
   methods: {
-    reservarEvento() {
-      gapi.load('client:auth2', () => {
-        gapi.client.init({
-          apiKey: 'AIzaSyBshg-TyEGxJbWceygJYzomqEvOBMdPMS4',
-          clientId: '755119694196-21hrunf2dmro918qmu7ksns1lj7aotnu.apps.googleusercontent.com',
-          discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest'],
-          scope: 'https://www.googleapis.com/auth/calendar.readonly'
-        }).then(() => {
-          if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
-            gapi.auth2.getAuthInstance().signIn().then(() => {
-              this.crearEvento();
-            }).catch((error) => {
-              console.error('Error de autenticación', error);
-            });
-          } else {
-            this.crearEvento();
-          }
-        }).catch((error) => {
-          console.error('Error al inicializar la API', error);
-        });
-      });
-    },
-    crearEvento() {
-      const evento = {
-        'summary': 'Nuevo evento',
-        'start': {
-          'dateTime': '2023-05-19T10:00:00',
-          'timeZone': 'America/Los_Angeles'
-        },
-        'end': {
-          'dateTime': '2023-05-19T12:00:00',
-          'timeZone': 'America/Los_Angeles'
-        }
-      };
+    getArtistInfo(artistName) {
+      const API_KEY = '702a6656c7e67685f795383b6a137bf4';
+      const url = `http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${artistName}&api_key=${API_KEY}&format=json`;
 
-      gapi.client.calendar.events.insert({
-        'calendarId': 'primary',
-        'resource': evento
-      }).then((response) => {
-        console.log('Evento creado', response.result);
-        alert('Evento creado correctamente');
-      }).catch((error) => {
-        console.error('Error al crear el evento', error);
-        alert('Error al crear el evento');
-      });
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          this.artistInfo = data.artist;
+          console.log(this.artistInfo);
+        })
+        .catch(error => {
+          console.error(error);
+        });
     }
   }
-}).mount("#app");
-
+}).mount('#app');
 
