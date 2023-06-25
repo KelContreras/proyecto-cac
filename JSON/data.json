@@ -1,0 +1,22 @@
+{
+    "instrumentos": [
+        {
+            "nombre": "Guitarra",
+            "tipo": "Instrumento",
+            "precio": 50000,
+            "marca": "Fender"
+        },
+        {
+            "nombre": "Bater\u00eda",
+            "tipo": "Instrumento",
+            "precio": 200000,
+            "marca": "Pearl"
+        },
+        {
+            "nombre": "Micr\u00f3fono",
+            "tipo": "Accesorio",
+            "precio": 10000,
+            "marca": "Shure"
+        }
+    ]
+}
