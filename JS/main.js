@@ -1,13 +1,13 @@
 
-// Selecciona el botón del menú hamburguesa y el menú de navegación
-var menuToggle = document.querySelector('.menu-toggle');
-var mainNav = document.querySelector('#main-nav ul');
 
-// Agrega el evento click al botón del menú hamburguesa
-menuToggle.addEventListener('click', function() {
-  // Alternar la clase 'show' en el menú de navegación
-  mainNav.classList.toggle('show');
-});
+//detector de eventos al botón (Menu) que alterna la clase “show“
+// del elemento con la clase “#main-nav ul” cuando se hace clic.
+
+document.querySelector("button.menu-toggle")
+    .addEventListener("click", function() {
+           document.querySelector("#main-nav ul").
+                      classList.toggle("show")})
+
 
 
 const { createApp } = Vue;
