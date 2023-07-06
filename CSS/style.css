@@ -400,7 +400,7 @@ form button[type="submit"]:active {
 
 
 /* Estilos para diferentes tamaños de pantalla */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 894px) {
   .menu-toggle {
     display: block;
     position: absolute;
@@ -494,7 +494,7 @@ form button[type="submit"]:active {
 
 
 
-@media only screen and (max-width: 480px) {
+@media only screen and (min-width: 480px) {
   body {
     font-size: 0.875rem;
   }
