@@ -65,6 +65,7 @@ ul {
 
 .submenu {
     position: relative;
+    margin-left: 850px;
 }
 
 .submenu #carrito{
