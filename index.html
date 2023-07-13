@@ -30,6 +30,13 @@
             <li><a class="aheader" href="servicios.html">Servicios</a></li>
             <li><a class="aheader" href="contacto.html">Contactos</a></li>
             <li><a class="aheader" href="catalogo.html">Catalogo</a></li>
+            <li id="crud" class="nav-item dropdown" >
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRUD</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="instrumentos.html">Productos</a>
+                </div>
+            </li>
+            <li><a class="aheader" href="login.html">login</a></li>
           </ul>
         </nav>
     </header>
@@ -87,6 +94,11 @@
         <p>Derechos reservados &copy; 2023 </p>
     </footer>
     <script src="./JS/main.js"></script>
+    <script>if ( sessionStorage.getItem("login")!="true" ){
+        const p = document.getElementById("crud")
+    
+         p.style.display="none" 
+      }</script>
 </body>
 
 </html>
