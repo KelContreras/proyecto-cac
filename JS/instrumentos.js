@@ -38,7 +38,7 @@ const { createApp } = Vue
             fetch(url, options)
                 .then(res => res.text()) // or res.json()
                 .then(res => {
-			 alert('Registro Eliminado')
+			 alert('Instrumento Eliminado')
                     location.reload(); // recarga el json luego de eliminado el registro
                 })
         },
@@ -57,7 +57,7 @@ const { createApp } = Vue
             }
             fetch(this.url, options)
                 .then(function () {
-                    alert("Registro grabado")
+                    alert("Instrumento grabado")
                     window.location.href = "./instrumentos.html";  // recarga instrumentos.html
                 })
                 .catch(err => {
