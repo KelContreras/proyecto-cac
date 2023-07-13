@@ -36,7 +36,7 @@
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Precio</th>
                                     <th scope="col">Marca</th>
-                                    <th scope="col">Imagen</th>
+                                    
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
@@ -47,9 +47,7 @@
                                     <td>{{producto.precio}}</td>
                                     <td>{{producto.marca}}</td>
                     
-                                    <td>
-                                        <img width="60" :src="producto.imagen" :alt="producto.nombre">
-                                    </td>
+                                    
                                     <td>
                                         <a class="btn btn-primary"
                                             :href="'instrumentos_update.html?id='+ producto.id">Editar</a>
